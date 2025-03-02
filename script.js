@@ -25,4 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+        
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Backspace") {
+                display.value = display.value.slice(0, -1); 
+            }
+        });
 });
+
+
