@@ -20,6 +20,8 @@ body {
 
 #container {
     background-color: #0a0a0ad7;
+    border: 0;
+    border-radius: 20px;
 }
 
 #buttons {
@@ -41,7 +43,10 @@ body {
     transition: background-color 0.3s ease;
     height: 70px;  /* Make buttons taller */
     color: white;
+    border: 0;
+    border-radius: 6px;
 }
 .btn:hover {
     background-color: rgb(105, 110, 114);
+    transform: scale(1.05);
 }
