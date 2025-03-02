@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #131313d7;
+}
+
+#display {
+    width: 390px;
+    height: 120px;
+    margin-bottom: 20px;
+    background-color: #303030;
+    border: solid 7px rgb(0, 0, 0);
+    color: white;
+    font-size: 40px;
+    margin: 20px;
+    padding-left: 20px;
+}
+
+#container {
+    background-color: #0a0a0ad7;
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 380px;
+    height: auto;
+    gap: 20px;
+    margin-left: 44px;
+    margin-bottom: 19px;
+}
+
+.btn {
+    background-color: #312f2f;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    flex: 80px;  /* Make buttons take up ~18% of the width (5 buttons per row) */
+    transition: background-color 0.3s ease;
+    height: 70px;  /* Make buttons taller */
+    color: white;
+}
+.btn:hover {
+    background-color: rgb(105, 110, 114);
+}

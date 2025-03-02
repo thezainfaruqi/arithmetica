@@ -1,10 +1,28 @@
-let container = document.getElementById("container")
+document.addEventListener("DOMContentLoaded", () => {
+    const display = document.getElementById("display")
+    const button = document.querySelectorAll(".btn") // .btn is class
 
-
-for (let i = 0; i <= 20; i++) {
-    buttons = document.createElement("button")
-    buttons.classList.add("buttons")
-    container.appendChild(buttons)
-}
-
-console.log("Hello, World")
+    button.forEach(button => {
+        button.addEventListener("click", () => {
+            const value = button.textContent
+            
+            if (value === "AC") {
+                display.value = ""
+            } else if (value === "Del") {
+                display.value = display.value.slice(0, -1);
+            } else if (value === "=") {
+                try {
+                    if (display.value.includes("/0")) {
+                        display.value = "You silly goose";
+                    } else {
+                        display.value = eval(display.value); 
+                    }
+                } catch {
+                    display.value = "Error"; 
+                }
+            } else {
+                display.value += value; 
+            }
+        });
+    });
+});
